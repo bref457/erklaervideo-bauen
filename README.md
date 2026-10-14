@@ -37,6 +37,8 @@ In einem leeren Ordner:
 
 In anderen Agenten schreibst du: „Starte den Skill erklaervideo-bauen.“
 
+Als Erstes fragt der Skill, wo deine Videos laufen sollen: **YouTube, Instagram oder beides**. Danach richtet er nur das ein, was du dafür brauchst.
+
 Der Skill speichert den Stand in `KANAL-STATUS.md`. Weitermachen in einem neuen Chat: `/erklaervideo-bauen weiter`. Das nächste Video: `/erklaervideo-bauen neues-video`.
 
 ## Ablauf
