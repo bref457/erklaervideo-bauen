@@ -19,7 +19,7 @@ In YouTube Studio → Analytics ansehen und in `KANAL-STATUS.md` notieren:
 ## Wie es weitergeht
 
 - **Nächstes Video:** aus Kommentaren, Suchbegriffen und der Themenliste der Website. Mit `/yt-video-bauen neues-video` bei Phase 2 starten.
-- **Kurzvideos (Shorts):** ein einzelner Stolperstein aus dem Video als 30 bis 60 Sekunden im Hochformat (1080 × 1920). Die Szenen lassen sich in Remotion neu anordnen.
+- **Shorts:** direkt nach dem Hochladen 2 bis 3 Shorts aus dem Video bauen, siehe [shorts.md](shorts.md).
 - **Aktualisieren:** Ändert sich ein Ablauf oder Preis, in der Beschreibung einen Hinweis setzen. Bei grösseren Änderungen die betroffenen Szenen neu bauen und als neue Version hochladen.
 
 ## Fertig, wenn

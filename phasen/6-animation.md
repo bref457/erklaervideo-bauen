@@ -10,7 +10,7 @@ Muster: [../vorlagen/beispiel-video/](../vorlagen/beispiel-video/).
 
 - `src/videos/v<nr>/Szenen.tsx`: eine Komponente pro ANIM-Szene, importiert die `sNN.json` der Stimme.
 - `src/videos/v<nr>/Nachgestellt.tsx`: BROWSER- und WINDOWS-Szenen.
-- `src/videos/v<nr>/Video<nr>.tsx`: `<Series>` mit allen Szenen, Kanal-Einstieg nach Szene 1.
+- `src/videos/v<nr>/Video<nr>.tsx`: `<Series>` mit allen Szenen, **Kanal-Einstieg nach Szene 1** und **Kanal-Abspann als letzte Sequenz** (`ABSPANN_SEKUNDEN`). Die Gesamtlänge zählt beide mit.
 - `src/Root.tsx`: Gesamtvideo plus jede Szene als eigene Komposition (Ordner pro Video), damit Standbilder einzeln gerendert werden können.
 
 Länge jeder Szene: `szenenLaenge(stimme, fps)` = 0,4 s Vorlauf + Sprechzeit + 0,7 s Nachlauf. Die Stimme läuft im Baustein `Szene` automatisch mit.
@@ -54,7 +54,7 @@ Die Person sieht den Entwurf an und sagt „passt“ oder was zu ändern ist. Kl
 ## Fertig, wenn
 
 - [ ] Alle Szenen gebaut, keine Platzhalter.
-- [ ] Kanal-Einstieg nach Szene 1 eingefügt.
+- [ ] Kanal-Einstieg nach Szene 1 und Kanal-Abspann am Schluss eingefügt.
 - [ ] „NACHGESTELLT“ in allen nachgestellten Szenen.
 - [ ] Keine echten persönlichen Daten im Bild.
 - [ ] Standbild-Raster geprüft.

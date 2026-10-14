@@ -6,6 +6,7 @@ Ein Skill für KI-Agenten wie Claude Code, der dich Schritt für Schritt durch Y
 - **Bild:** Animationen mit Remotion, jede Einblendung genau auf das gesprochene Wort
 - **Bildschirmabläufe:** nachgestellt, mit echten Fotos öffentlicher Webseiten und nachgebauten Oberflächen. Niemand muss eine Stunde lang aufnehmen, nichts Persönliches ist zu sehen.
 - **Veröffentlichen:** Titel, Beschreibung, Kapitel mit Zeitangaben, Tags, drei Thumbnail-Vorschläge und eine Anleitung zum Hochladen
+- **Shorts:** aus jedem Video 2 bis 3 Shorts im Hochformat mit grossen, mitlaufenden Untertiteln
 
 Gut geeignet für Anleitungen, Software-Tutorials und Erklärvideos, besonders wenn du nicht erkennbar sein möchtest.
 
@@ -50,6 +51,7 @@ Der Skill speichert den Stand in `KANAL-STATUS.md`. Weitermachen in einem neuen 
 | 6 | Animation und Schnitt | pro Video |
 | 7 | Veröffentlichen | pro Video |
 | 8 | Danach | pro Video |
+| + | Shorts | pro Video |
 
 ## Was du brauchst und was es kostet
 

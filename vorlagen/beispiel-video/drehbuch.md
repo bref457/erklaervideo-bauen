@@ -63,10 +63,10 @@ Nur Zeilen mit `> ` werden gesprochen. Befehle stehen im Bild, die Stimme liest 
 
 ## 8 · Abschluss · ANIM
 
-**Bild:** Zeichen, Kanalname, Handle, Website.
+**Bild:** Zeichen, Kanalname, Handle, Website. Danach läuft automatisch der Kanal-Abspann.
 
 **Stimme:**
-> Wenn dir das geholfen hat, abonniere den Kanal. Bis zum nächsten Video.
+> Im nächsten Video legen wir die erste Datei in diesem Ordner an. Bis gleich.
 
 ---
 

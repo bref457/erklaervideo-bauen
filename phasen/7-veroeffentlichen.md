@@ -37,7 +37,9 @@ Upload über die YouTube-Schnittstelle ist möglich, aber Videos aus nicht gepr�
 4. „Nein, nicht speziell für Kinder“.
 5. **Tags:** ganz unten auf „Mehr anzeigen“ klicken, dort ist das Feld.
 6. Veränderte oder synthetische Inhalte: Bei einer KI-Erzählstimme ohne echte Person ist das nicht eindeutig. Im Zweifel „Ja“.
-7. Sichtbarkeit zuerst „Nicht gelistet“, einmal ansehen, dann „Öffentlich“.
+7. **Abspann** (Seite „Videoelemente“ beim Hochladen, oder später Studio → Inhalte → Video → Abspann): „Element hinzufügen“ → **Video** („Für Zuschauer am besten geeignet“, oder gezielt das nächste passende lange Video) und **Abonnieren**. Beide Elemente auf die gestrichelten Flächen im Abspann ziehen (Video links, Abo rechts) und auf die ganzen 18 Sekunden ausdehnen.
+8. Sichtbarkeit zuerst „Nicht gelistet“, einmal ansehen, dann „Öffentlich“.
+9. **Angepinnter Kommentar** nach dem Veröffentlichen, mit einer Frage, z. B. „Wo hat es bei dir nicht geklappt? Schreib es hier rein.“ Kommentar schreiben, dann über die drei Punkte „Anpinnen“.
 
 Häufig: Die Datei wird aus Versehen zweimal hochgeladen. Dann steht ein Video als „Entwurf“ ohne Titel in der Liste. Löschen über die drei Punkte → „Endgültig löschen“.
 
@@ -55,7 +57,9 @@ Wenn die Website Videos per Klick lädt (Vorschaubild lokal, YouTube erst nach K
 
 - [ ] Thumbnail gewählt.
 - [ ] Finale MP4 und `youtube.md` fertig.
+- [ ] Abspann-Elemente gesetzt (Video und Abonnieren).
 - [ ] Video öffentlich, Link in `KANAL-STATUS.md`.
+- [ ] Kommentar mit Frage angepinnt.
 - [ ] Doppelte Entwürfe gelöscht.
 - [ ] Auf der Website eingebunden und live geprüft (falls vorhanden).
 

@@ -225,8 +225,8 @@ export const S08Abschluss: React.FC = () => {
         <Zeichen groesse={180} einspringen />
         <Titel style={{ fontSize: 110, ...rein(frame, 6) }}>{kanal.name}</Titel>
         <div style={{ display: "flex", gap: 70, fontFamily: schrift.kopf, fontWeight: 700, fontSize: 48 }}>
-          <span style={{ color: farbe.akzentHell, ...rein(frame, wortFrame(st, "abonniere", fps)) }}>{kanal.handle}</span>
-          <span style={rein(frame, wortFrame(st, "Bis zum", fps))}>{kanal.website}</span>
+          <span style={{ color: farbe.akzentHell, ...rein(frame, wortFrame(st, "nächsten Video", fps)) }}>{kanal.handle}</span>
+          <span style={rein(frame, wortFrame(st, "Bis gleich", fps))}>{kanal.website}</span>
         </div>
       </AbsoluteFill>
     </Szene>

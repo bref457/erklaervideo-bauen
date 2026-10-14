@@ -1,7 +1,7 @@
 ---
 name: yt-video-bauen
 description: "Führt Schritt für Schritt durch YouTube-Erklärvideos ohne Kamera und ohne eigene Stimme: Kanal einrichten (Marke, KI-Stimme bei ElevenLabs, Kanal-Einstieg, Thumbnail-Stil), dann pro Video Thema und Fakten, Drehbuch, Vertonung, Bildmaterial, Animation mit Remotion, Veröffentlichen mit Titel, Beschreibung, Kapiteln, Tags und Thumbnail, Nachmessen. Bildschirmabläufe werden nachgestellt statt gefilmt. Nutzen, wenn jemand ein YouTube-Video, Erklärvideo oder Tutorial mit KI-Stimme und Animationen bauen will, /yt-video-bauen aufruft oder an einem laufenden Video weitermachen will (Datei KANAL-STATUS.md im Projekt)."
-argument-hint: "[start | weiter | neues-video | phase <0-8> | status]"
+argument-hint: "[start | weiter | neues-video | shorts | phase <0-8> | status]"
 user-invocable: true
 ---
 
@@ -16,7 +16,7 @@ Du bist Regisseur, Cutter und Animator. Die Person entscheidet, du bereitest jed
 | Phase | Name | Wie oft | Ergebnis | Datei |
 |---|---|---|---|---|
 | 0 | Einrichten | einmal | Remotion-Projekt, Remotion-Skills, ElevenLabs-Schlüssel, Statusdatei | [phasen/0-einrichten.md](phasen/0-einrichten.md) |
-| 1 | Kanal-Fundament | einmal | Marke, Erkennbarkeit, Stimme, Kanal-Einstieg, Thumbnail-Stil, Kanal-Profil | [phasen/1-kanal.md](phasen/1-kanal.md) |
+| 1 | Kanal-Fundament | einmal | Marke, Erkennbarkeit, Stimme, Kanal-Einstieg, Kanal-Abspann, Thumbnail-Stil, Kanal-Profil | [phasen/1-kanal.md](phasen/1-kanal.md) |
 | 2 | Thema und Fakten | pro Video | Thema, Suchbegriffe, geprüfte Fakten aus offiziellen Quellen | [phasen/2-thema.md](phasen/2-thema.md) |
 | 3 | Drehbuch | pro Video | `drehbuch.md`: Szenen mit Sprechtext und Bild | [phasen/3-drehbuch.md](phasen/3-drehbuch.md) |
 | 4 | Stimme | pro Video | vertonte Szenen mit Zeitstempeln, Aussprache geprüft | [phasen/4-stimme.md](phasen/4-stimme.md) |
@@ -24,6 +24,7 @@ Du bist Regisseur, Cutter und Animator. Die Person entscheidet, du bereitest jed
 | 6 | Animation und Schnitt | pro Video | fertiger Entwurf als MP4 | [phasen/6-animation.md](phasen/6-animation.md) |
 | 7 | Veröffentlichen | pro Video | Thumbnail, YouTube-Texte, Upload, Einbau auf der Website | [phasen/7-veroeffentlichen.md](phasen/7-veroeffentlichen.md) |
 | 8 | Danach | pro Video | Zahlen, Kommentare, nächstes Thema | [phasen/8-danach.md](phasen/8-danach.md) |
+| + | Shorts | pro Video, nach Phase 7 | 2 bis 3 Shorts im Hochformat mit Untertiteln, verweisen aufs ganze Video | [phasen/shorts.md](phasen/shorts.md) |
 
 Die Reihenfolge hat Gründe. Die Fakten kommen vor dem Drehbuch, weil sich Abläufe und Preise ständig ändern und ein Video mit veraltetem Ablauf schadet. Das Drehbuch wird abgenommen, bevor eine Sekunde Ton entsteht, weil jede Textänderung danach neu vertont werden muss. Die Stimme kommt vor der Animation, weil die Animation an den gesprochenen Wörtern hängt: Ein Schild erscheint genau dann, wenn die Stimme das Wort sagt. Das Thumbnail kommt am Schluss, weil erst dann klar ist, was das Video wirklich zeigt.
 
@@ -73,7 +74,7 @@ Aufruf in Claude Code: `/yt-video-bauen`. Argumente: `start` beginnt neu (besteh
 - [werkzeuge/toene.mjs](werkzeuge/toene.mjs): erzeugt kurze Soundeffekte mit eigener Lizenz.
 - [werkzeuge/seiten.py](werkzeuge/seiten.py): fotografiert öffentliche Seiten (Cookies ablehnen, ganze Seite, Klickziele und Scroll-Marken als JSON).
 - [werkzeuge/kapitel.mjs](werkzeuge/kapitel.mjs): berechnet die YouTube-Kapitel aus den Szenenlängen.
-- [vorlagen/remotion/](vorlagen/remotion/): erprobte Bausteine (Szene mit Stimme und Wort-Synchronisation, Browser mit Mauszeiger, Terminal, Windows-Oberfläche, Warnschild, Zeichen, Kanal-Einstieg, Plakette), `marke.ts` mit neutralem Standard und `marke/zeichen.svg` als Platzhalter-Logo.
+- [vorlagen/remotion/](vorlagen/remotion/): erprobte Bausteine (Szene mit Stimme und Wort-Synchronisation, Browser mit Mauszeiger, Terminal, Windows-Oberfläche, Warnschild, Zeichen, Kanal-Einstieg, Kanal-Abspann, Untertitel, Plakette), `marke.ts` mit neutralem Standard und `marke/zeichen.svg` als Platzhalter-Logo.
 - [vorlagen/beispiel-video/](vorlagen/beispiel-video/): kurzes, vollständiges Muster-Video („Die ersten drei Befehle in der PowerShell“): Drehbuch, Szenen, Root, Thumbnails.
 - [vorlagen/KANAL-STATUS.md](vorlagen/KANAL-STATUS.md), [vorlagen/drehbuch.md](vorlagen/drehbuch.md), [vorlagen/youtube.md](vorlagen/youtube.md).
 

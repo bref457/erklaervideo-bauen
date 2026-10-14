@@ -37,14 +37,26 @@ node werkzeuge/toene.mjs public/klang einstieg-whoosh "soft airy whoosh transiti
 
 Als MP4 rendern und in den Chat schicken.
 
-## 5. Thumbnail-Stil
+## 5. Kanal-Abspann
+
+Jedes lange Video endet mit einem immer gleichen Abspann von **18 Sekunden**. So hat jedes Video einen festen Einstieg und einen festen Abspann.
+
+- Vorlage: [../vorlagen/remotion/bausteine/KanalAbspann.tsx](../vorlagen/remotion/bausteine/KanalAbspann.tsx). Er lässt Platz für YouTubes **Abspann-Elemente**: links eine Fläche für einen Video-Kasten (16:9), rechts ein Kreis für den Abo-Knopf. Die Elemente liegen in den letzten 5 bis 20 Sekunden eines Videos, deshalb 18 Sekunden.
+- Sprechtext einmal vertonen (`videos/kanal-abspann/drehbuch.md`, eine Szene) und in jedem Video wiederverwenden. Ton: ehrlich, nicht marktschreierisch. Eine **konkrete Frage** für die Kommentare bringt mehr als „Like und Glocke“. Muster:
+  > Wenn dir das geholfen hat, abonniere den Kanal. Und schreib mir in die Kommentare, wo es bei dir nicht geklappt hat. Daraus mache ich die nächsten Videos. Hier geht es direkt weiter.
+- **Wortwahl mit der Person prüfen.** Manche Wendungen klingen regional anders, zum Beispiel ist „wo du hängen geblieben bist“ in der Schweiz abwertend. Neutral: „wo es bei dir nicht geklappt hat“.
+- Shorts bekommen keinen Abspann (dort gibt es keine Abspann-Elemente, der Verweis läuft über „Ähnliches Video“).
+
+Als MP4 rendern und in den Chat schicken.
+
+## 6. Thumbnail-Stil
 
 Festlegen, was jedes Thumbnail gemeinsam hat: Hintergrund, Schrift, Maskottchen, Warnschilder oder andere Markenzeichen. Grundregeln:
 - 1280 × 720, höchstens 3 bis 5 grosse Wörter, auf dem Handy lesbar.
 - Ohne Gesicht: Maskottchen, Symbole, ein Ausschnitt aus dem Video (Fehlermeldung, Preis).
 - Pro Video entstehen in Phase 7 drei Varianten mit unterschiedlichem Aufhänger: sachlich (Thema), Problem (Fehlermeldung), Kosten oder Ergebnis.
 
-## 6. Kanal-Profil
+## 7. Kanal-Profil
 
 Falls noch nicht geschehen, mit der Person in YouTube Studio → Anpassung:
 - Profilbild und Banner (2560 × 1440, wichtiger Inhalt in der Mitte),
@@ -53,7 +65,7 @@ Falls noch nicht geschehen, mit der Person in YouTube Studio → Anpassung:
 
 ## Abnahme
 
-Die Person bestätigt Stimme, Einstieg und Thumbnail-Stil.
+Die Person bestätigt Stimme, Einstieg, Abspann und Thumbnail-Stil.
 
 ## Fertig, wenn
 
@@ -61,6 +73,7 @@ Die Person bestätigt Stimme, Einstieg und Thumbnail-Stil.
 - [ ] `marke.ts` und Markenbausteine angepasst.
 - [ ] Stimme gewählt, `voice_id` in `.env`.
 - [ ] Kanal-Einstieg als MP4 abgenommen.
+- [ ] Kanal-Abspann als MP4 abgenommen, Sprechtext mit der Person abgestimmt.
 - [ ] Thumbnail-Stil beschrieben.
 - [ ] Kanal-Profil vollständig.
 

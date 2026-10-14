@@ -11,6 +11,7 @@ Gesprochener Text wird gehört, nicht gelesen. Es gibt kein Zurückspringen und 
 ## Satzbau
 
 - Ein Gedanke pro Satz. Höchstens etwa 20 Wörter.
+- **Keine Telegrammsätze** wie „Befehl eingefügt, Enter gedrückt, nichts passiert?“. Die KI-Stimme hetzt dann oft durch, fast doppelt so schnell. Besser ganze Sätze: „Du fügst den Befehl ein. Du drückst Enter. Und dann passiert nichts?“ Nach dem Vertonen kurze Szenen auf Tempo prüfen (Sprechzeit gegen Wortzahl, etwa 2,5 Wörter pro Sekunde).
 - Wichtiges ans Satzende, dort liegt die Betonung.
 - Keine Klammern, keine Fussnoten, keine Gedankenstriche. Was in Klammern stünde, wird ein eigener Satz oder fällt weg.
 - Keine Aufzählungen mit mehr als drei Teilen in einem Satz.

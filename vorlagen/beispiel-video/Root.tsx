@@ -1,6 +1,7 @@
 // Beispiel für src/Root.tsx: Gesamtvideo, Kanal-Einstieg, Thumbnails und jede Szene einzeln
 // (einzeln, damit Standbilder pro Szene gerendert werden können).
 import { Composition, Folder, Still } from "remotion";
+import { ABSPANN_SEKUNDEN, KanalAbspann } from "./bausteine/KanalAbspann";
 import { EINSTIEG_SEKUNDEN, KanalEinstieg } from "./bausteine/KanalEinstieg";
 import { szenenLaenge, type Stimme } from "./bausteine/Szene";
 import * as S from "./videos/beispiel/Szenen";
@@ -15,6 +16,7 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="Beispiel-Video" component={BeispielVideo} durationInFrames={gesamtLaenge(FPS)} fps={FPS} width={1920} height={1080} />
     <Folder name="Kanal">
       <Composition id="Kanal-Einstieg" component={KanalEinstieg} durationInFrames={Math.round(EINSTIEG_SEKUNDEN * FPS)} fps={FPS} width={1920} height={1080} />
+      <Composition id="Kanal-Abspann" component={KanalAbspann} durationInFrames={ABSPANN_SEKUNDEN * FPS} fps={FPS} width={1920} height={1080} />
     </Folder>
     <Folder name="Vorschaubilder">
       <Still id="Vorschau-A" component={Vorschaubild} width={1280} height={720} defaultProps={{ variante: "A" }} />

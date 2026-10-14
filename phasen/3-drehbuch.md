@@ -20,7 +20,7 @@ Das Format ist fest, weil `stimme.mjs` es liest:
 5. **Stolpersteine:** jeder bekommt eine eigene Szene mit Warnschild, Fehlermeldung und Lösung.
 6. **Erster Erfolg:** etwas Kleines, das sofort funktioniert.
 7. **Zusammenfassung (unter 10 s):** die Schritte als Route.
-8. **Abschluss:** Website, Kanal, nächstes Video.
+8. **Abschluss (unter 10 s):** Website und worum es im nächsten Video geht. Kein Abo-Aufruf hier, der kommt im festen Kanal-Abspann, der automatisch danach läuft.
 
 Länge: 4 bis 8 Minuten für eine Anleitung. Lieber kürzer und vollständig als lang.
 
