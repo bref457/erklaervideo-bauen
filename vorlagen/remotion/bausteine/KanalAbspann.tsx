@@ -1,8 +1,10 @@
 // Fester Kanal-Abspann (18 s) am Ende jedes langen Videos. Stimme: videos/kanal-abspann/drehbuch.md einmal vertonen.
+// Musik: node werkzeuge/musik.mjs public/klang/abspann-musik.mp3 18 "calm warm instrumental lo-fi, no vocals, smooth fade out"
 // Lässt Platz für YouTubes Abspann-Elemente: links ein Video-Kasten (16:9), rechts der Abo-Knopf.
 // In YouTube Studio → Abspann die Elemente genau auf die gestrichelten Flächen ziehen.
+import { Audio } from "@remotion/media";
 import type React from "react";
-import { AbsoluteFill, Easing, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
+import { AbsoluteFill, Easing, interpolate, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import abspann from "../../public/stimme/kanal-abspann/s01.json";
 import { farbe, kanal, sanft, schrift } from "../marke";
 import { Zeichen } from "./Zeichen";
@@ -23,7 +25,10 @@ const rein = (frame: number, ab: number, dauer = 14): React.CSSProperties => ({
 
 const stimme = abspann as Stimme;
 
-export const KanalAbspann: React.FC = () => {
+// naechstes: Titel des Videos, auf das der Video-Kasten zeigt. Die Stimme kündigt es in der Abschluss-Szene
+// des Videos konkret an (Brücke). Ohne Angabe steht „Weiter geht's“, nie „Danke fürs Schauen“:
+// Abschiedsworte lassen viele Zuschauer sofort wegklicken.
+export const KanalAbspann: React.FC<{ readonly naechstes?: string }> = ({ naechstes }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const abo = wortFrame(stimme, "abonniere", fps);
@@ -42,7 +47,15 @@ export const KanalAbspann: React.FC = () => {
   return (
     <Szene stimme={stimme} video="kanal-abspann" leitlinie={false}>
       <AbsoluteFill>
-        <div style={{ position: "absolute", top: 90, width: "100%", textAlign: "center", fontFamily: schrift.kopf, fontWeight: 800, fontSize: 72, letterSpacing: "-0.04em", ...rein(frame, 0) }}>Danke fürs Schauen</div>
+        <div style={{ position: "absolute", top: 90, width: "100%", textAlign: "center", fontFamily: schrift.kopf, fontWeight: 800, fontSize: naechstes ? 54 : 72, letterSpacing: "-0.04em", padding: "0 60px", ...rein(frame, 0) }}>
+          {naechstes ? (
+            <>
+              Als Nächstes: <span style={{ color: farbe.akzentHell }}>{naechstes}</span>
+            </>
+          ) : (
+            "Weiter geht's"
+          )}
+        </div>
         <div style={{ position: "absolute", top: 196, width: "100%", textAlign: "center", fontSize: 38, color: farbe.leise, ...rein(frame, kommentare - 4) }}>
           Schreib mir in die Kommentare: <span style={{ color: farbe.akzentHell }}>Wo hat es nicht geklappt?</span>
         </div>
@@ -53,6 +66,8 @@ export const KanalAbspann: React.FC = () => {
           {kanal.website} · <span style={{ color: farbe.akzentHell }}>{kanal.handle}</span>
         </div>
       </AbsoluteFill>
+      {/* Leise Musik (ElevenLabs, eigene Lizenz): unter der Stimme leiser, danach etwas lauter */}
+      <Audio src={staticFile("klang/abspann-musik.mp3")} premountFor={fps} volume={(f) => interpolate(f, [0, 12, weiter + 20, weiter + 45], [0, 0.12, 0.12, 0.28], klemmen)} />
     </Szene>
   );
 };

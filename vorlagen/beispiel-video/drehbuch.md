@@ -66,7 +66,7 @@ Nur Zeilen mit `> ` werden gesprochen. Befehle stehen im Bild, die Stimme liest 
 **Bild:** Zeichen, Kanalname, Handle, Website. Danach läuft automatisch der Kanal-Abspann.
 
 **Stimme:**
-> Im nächsten Video legen wir die erste Datei in diesem Ordner an. Bis gleich.
+> Jetzt hast du einen eigenen Ordner. Im nächsten Video legst du darin deine erste Datei an.
 
 ---
 

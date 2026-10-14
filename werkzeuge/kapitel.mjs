@@ -1,6 +1,6 @@
 // Berechnet die YouTube-Kapitel aus den vertonten Szenen.
 //
-//   node kapitel.mjs <video-ordnername> [--einstieg-nach 1] [--einstieg-sekunden 3.5] [--fps 30]
+//   node kapitel.mjs <video-ordnername> [--einstieg-nach 1] [--einstieg-sekunden 1.5] [--fps 30]
 //
 // Muss dieselben Werte wie src/bausteine/Szene.tsx nutzen (VORLAUF 0.4, NACHLAUF 0.7).
 // Liest public/stimme/<video>/szenen.json. Ausgabe direkt in youtube.md kopieren.
@@ -19,7 +19,7 @@ const wert = (name, standard) => {
 };
 const fps = wert("--fps", 30);
 const einstiegNach = wert("--einstieg-nach", 1);
-const einstiegFrames = Math.round(wert("--einstieg-sekunden", 3.5) * fps);
+const einstiegFrames = Math.round(wert("--einstieg-sekunden", 1.5) * fps);
 
 const szenen = JSON.parse(readFileSync(join("public", "stimme", video, "szenen.json"), "utf8"));
 const zeit = (f) => {

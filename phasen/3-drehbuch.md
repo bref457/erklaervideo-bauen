@@ -13,14 +13,17 @@ Das Format ist fest, weil `stimme.mjs` es liest:
 
 ## Aufbau, der funktioniert
 
-1. **Aufhänger (10 bis 15 s):** Was wir machen und warum dieses Video anders ist. Danach kommt der Kanal-Einstieg.
-2. **Was du brauchst:** Voraussetzungen als Checkliste.
-3. **Was es kostet:** früh und ehrlich, falls etwas Geld kostet.
-4. **Die Schritte:** eine Szene pro Schritt, in der Reihenfolge aus `fakten.md`.
-5. **Stolpersteine:** jeder bekommt eine eigene Szene mit Warnschild, Fehlermeldung und Lösung.
-6. **Erster Erfolg:** etwas Kleines, das sofort funktioniert.
-7. **Zusammenfassung (unter 10 s):** die Schritte als Route.
-8. **Abschluss (unter 10 s):** Website und worum es im nächsten Video geht. Kein Abo-Aufruf hier, der kommt im festen Kanal-Abspann, der automatisch danach läuft.
+1. **Aufhänger (0 bis 15 s):** Das Versprechen aus Titel und Thumbnail sofort aufgreifen und das Ergebnis anreissen: „In diesem Video installieren wir X unter Windows, Schritt für Schritt, mit den Stellen, an denen es hakt.“ **Keine Begrüssung** („Hallo Leute, willkommen auf meinem Kanal“), die wird übersprungen. Nur versprechen, was stimmt (keine erfundenen Zeitangaben wie „in 5 Minuten“).
+2. Danach läuft automatisch der **Kanal-Einstieg** (1,5 s).
+3. **Fahrplan (ein bis zwei Sätze):** was im Video kommt, in der Reihenfolge der Kapitel. „Wir gehen durch die Voraussetzungen, die Installation und die häufigsten Fehler.“
+4. **Was du brauchst** und **was es kostet**, früh und ehrlich.
+5. **Die Schritte:** eine Szene pro Schritt aus `fakten.md`. Jede Szene endet mit einer **Brücke** zur nächsten („Jetzt läuft es, aber ein Schritt fehlt noch …“), damit niemand an einer Kapitelgrenze aussteigt.
+6. **Stolpersteine:** jeder eine eigene Szene mit Warnschild, Fehlermeldung und Lösung.
+7. **Eine Bitte nach dem ersten Erfolg:** direkt nach dem ersten Aha-Moment (z. B. dem gelösten Stolperstein) **ein** kurzer Satz: „Wenn dir das gerade geholfen hat, lass ein Like da.“ Nur eine Bitte, nicht Like, Abo, Glocke und Kommentar auf einmal. Abo und Kommentar kommen im Abspann.
+8. **Erster Erfolg:** etwas Kleines, das sofort funktioniert.
+9. **Zusammenfassung (unter 10 s):** die Schritte als Route.
+10. **Abschluss mit Brücke (unter 10 s):** kurzes Fazit und eine **Brücke zum nächsten Video**: „Jetzt, wo X läuft, willst du sicher wissen, was es im Monat kostet. Das zeige ich dir im nächsten Video.“ **Keine Abschiedsworte** („Das war's“, „Bis dann“, „Danke fürs Zuschauen“), dabei klicken die meisten weg.
+11. Danach läuft automatisch der **Kanal-Abspann** (18 s) mit „Als Nächstes: <Titel>“.
 
 Länge: 4 bis 8 Minuten für eine Anleitung. Lieber kürzer und vollständig als lang.
 

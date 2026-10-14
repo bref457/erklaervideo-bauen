@@ -23,7 +23,7 @@ export const BeispielVideo = () => {
       <Series.Sequence name="6 Inhalt anzeigen" durationInFrames={szenenLaenge(l06, fps)} premountFor={fps}><S.S06Anzeigen /></Series.Sequence>
       <Series.Sequence name="7 Zusammenfassung" durationInFrames={szenenLaenge(l07, fps)} premountFor={fps}><S.S07Route /></Series.Sequence>
       <Series.Sequence name="8 Abschluss" durationInFrames={szenenLaenge(l08, fps)} premountFor={fps}><S.S08Abschluss /></Series.Sequence>
-      <Series.Sequence name="Kanal-Abspann" durationInFrames={ABSPANN_SEKUNDEN * fps} premountFor={fps}><KanalAbspann /></Series.Sequence>
+      <Series.Sequence name="Kanal-Abspann" durationInFrames={ABSPANN_SEKUNDEN * fps} premountFor={fps}><KanalAbspann naechstes="Die erste Datei anlegen" /></Series.Sequence>
     </Series>
   );
 };

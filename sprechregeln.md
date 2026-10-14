@@ -34,6 +34,12 @@ Die KI-Stimme spricht, was dasteht. Deshalb im Sprechtext so schreiben, wie es k
 - **Sicherheitshinweis bei Befehlen:** Befehle nur von der offiziellen Seite kopieren.
 - **Nichts versprechen, was nicht belegt ist.**
 
+## Aufmerksamkeit halten
+
+- **Keine Begrüssung am Anfang** und **keine Abschiedsworte am Ende.** Beides lässt Zuschauer wegklicken.
+- **Brücken:** Das Ende einer Szene kündigt die nächste an.
+- **Ein Aufruf pro Stelle:** einmal „Like“ nach dem ersten Erfolg, im Abspann Abo und Kommentar. Nie alles auf einmal.
+
 ## Länge
 
 Ruhiges Sprechtempo: etwa 130 bis 150 Wörter pro Minute. Ein Video von 4 Minuten hat also etwa 550 Wörter Sprechtext. Pausen zwischen Szenen entstehen beim Schnitt.

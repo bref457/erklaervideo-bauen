@@ -55,12 +55,18 @@ type Props = {
   readonly inhalt?: React.ReactNode; // statt Foto: nachgebaute Seite
   readonly scroll?: { frame: number; wert: number }[];
   readonly markierungen?: { x: number; y: number; b: number; h: number; ab: number; bis?: number }[];
+  // Lupe: zoomt ab Frame `ab` auf den Punkt x/y (Seitenfoto-Koordinaten) heran, damit kleine Schrift
+  // auf dem Handy lesbar wird. Den Mauszeiger währenddessen ausblenden (er rechnet ohne Zoom).
+  readonly lupe?: { ab: number; bis?: number; x: number; y: number; faktor?: number };
   readonly children?: React.ReactNode;
 };
 
-export const Browser: React.FC<Props> = ({ url, bild, bildHoehe = 1080, inhalt, scroll = [{ frame: 0, wert: 0 }], markierungen = [], children }) => {
+export const Browser: React.FC<Props> = ({ url, bild, bildHoehe = 1080, inhalt, scroll = [{ frame: 0, wert: 0 }], markierungen = [], lupe, children }) => {
   const frame = useCurrentFrame();
   const y = verlauf(frame, scroll);
+  const zoom = lupe
+    ? interpolate(frame, [lupe.ab, lupe.ab + 18, ...(lupe.bis ? [lupe.bis, lupe.bis + 18] : [])], [1, lupe.faktor ?? 2, ...(lupe.bis ? [lupe.faktor ?? 2, 1] : [])], { ...klemmen, easing: Easing.bezier(...sanft) })
+    : 1;
   return (
     <>
       <div
@@ -89,6 +95,7 @@ export const Browser: React.FC<Props> = ({ url, bild, bildHoehe = 1080, inhalt, 
           </div>
         </div>
         <div style={{ position: "relative", height: FENSTER.hoehe - FENSTER.leiste, overflow: "hidden" }}>
+          <div style={{ position: "absolute", inset: 0, scale: `${zoom}`, transformOrigin: lupe ? `${lupe.x * MASS}px ${(lupe.y - y) * MASS}px` : "center" }}>
           {bild && <Img src={staticFile(bild)} style={{ position: "absolute", left: 0, top: -y * MASS, width: FENSTER.breite, height: bildHoehe * MASS }} />}
           {inhalt}
           {markierungen.map((m, i) => (
@@ -107,6 +114,7 @@ export const Browser: React.FC<Props> = ({ url, bild, bildHoehe = 1080, inhalt, 
               }}
             />
           ))}
+          </div>
         </div>
       </div>
       {children}

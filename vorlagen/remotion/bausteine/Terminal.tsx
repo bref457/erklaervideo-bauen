@@ -15,12 +15,14 @@ type Props = {
   readonly titel?: string;
   readonly zeilen: Zeile[];
   readonly breite?: number;
+  // Schriftgrösse in px. Mindestens 42 im 1920er-Bild, sonst ist es auf dem Handy nicht lesbar.
+  readonly schrift?: number;
   readonly style?: React.CSSProperties;
 };
 
 const TIPPEN = 1.6; // Zeichen pro Frame
 
-export const Terminal: React.FC<Props> = ({ titel = "Windows PowerShell", zeilen, breite = 1400, style }) => {
+export const Terminal: React.FC<Props> = ({ titel = "Windows PowerShell", zeilen, breite = 1500, schrift: groesse = 42, style }) => {
   const frame = useCurrentFrame();
   const sichtbar = zeilen.filter((z) => frame >= z.ab);
   const letzte = sichtbar.at(-1);
@@ -43,7 +45,7 @@ export const Terminal: React.FC<Props> = ({ titel = "Windows PowerShell", zeilen
         <span style={{ width: 14, height: 14, borderRadius: 7, backgroundColor: farbe.akzent }} />
         {titel}
       </div>
-      <div style={{ padding: "30px 36px 40px", fontSize: 34, lineHeight: 1.55, minHeight: 260 }}>
+      <div style={{ padding: "30px 36px 40px", fontSize: groesse, lineHeight: 1.5, minHeight: 260 }}>
         {sichtbar.map((z, i) => {
           const istBefehl = (z.art ?? "befehl") === "befehl";
           const zeichen = istBefehl ? Math.floor((frame - z.ab) * TIPPEN) : z.text.length;
@@ -57,7 +59,7 @@ export const Terminal: React.FC<Props> = ({ titel = "Windows PowerShell", zeilen
               {z.art === "wahl" && <span style={{ color: farbe.akzentHell }}>❯ </span>}
               {text}
               {z === letzte && istBefehl && (fertig ? cursorAn : true) && (
-                <span style={{ display: "inline-block", width: 18, height: 36, marginLeft: 4, translate: "0 6px", backgroundColor: farbe.akzentHell }} />
+                <span style={{ display: "inline-block", width: groesse * 0.5, height: groesse * 1.05, marginLeft: 4, translate: "0 6px", backgroundColor: farbe.akzentHell }} />
               )}
             </div>
           );

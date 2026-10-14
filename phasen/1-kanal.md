@@ -27,12 +27,12 @@ Modell: `eleven_multilingual_v2` für Deutsch.
 
 ## 4. Kanal-Einstieg
 
-Ein immer gleicher, **kurzer** Einstieg: 3 bis 4 Sekunden. Längere Intros lassen Zuschauer abspringen. Er kommt **nach der ersten Szene** (dem Aufhänger), nie ganz am Anfang.
+Ein immer gleicher, **sehr kurzer** Einstieg: **1,5 Sekunden**, nur Logo oder Zeichen mit einem leisen Whoosh. Klassische Logo-Intros (5 bis 10 Sekunden mit Musik) lassen viele Zuschauer abspringen, deshalb nur ein kurzes Wiedererkennungszeichen. Er kommt **nach der ersten Szene** (dem Aufhänger), nie ganz am Anfang. Was im Video kommt, sagt die Stimme direkt danach (Fahrplan, siehe Phase 3).
 
-Vorlage: [../vorlagen/remotion/bausteine/KanalEinstieg.tsx](../vorlagen/remotion/bausteine/KanalEinstieg.tsx). Zeichen springt ein, der Kanalname schiebt sich daneben, darunter tippt sich der Kanal-Satz. Zwei kurze Töne mit [../werkzeuge/toene.mjs](../werkzeuge/toene.mjs) erzeugen, keine fremden Soundeffekte:
+Vorlage: [../vorlagen/remotion/bausteine/KanalEinstieg.tsx](../vorlagen/remotion/bausteine/KanalEinstieg.tsx). Den Whoosh mit [../werkzeuge/toene.mjs](../werkzeuge/toene.mjs) erzeugen, keine fremden Soundeffekte:
 
 ```
-node werkzeuge/toene.mjs public/klang einstieg-whoosh "soft airy whoosh transition, short, clean, modern, no music" 1.2 einstieg-feder "tiny soft digital blip, friendly, short pop sound, clean" 0.5
+node werkzeuge/toene.mjs public/klang einstieg-whoosh "soft airy whoosh transition, short, clean, modern, no music" 1.2
 ```
 
 Als MP4 rendern und in den Chat schicken.
@@ -45,6 +45,8 @@ Jedes lange Video endet mit einem immer gleichen Abspann von **18 Sekunden**. So
 - Sprechtext einmal vertonen (`videos/kanal-abspann/drehbuch.md`, eine Szene) und in jedem Video wiederverwenden. Ton: ehrlich, nicht marktschreierisch. Eine **konkrete Frage** für die Kommentare bringt mehr als „Like und Glocke“. Muster:
   > Wenn dir das geholfen hat, abonniere den Kanal. Und schreib mir in die Kommentare, wo es bei dir nicht geklappt hat. Daraus mache ich die nächsten Videos. Hier geht es direkt weiter.
 - **Wortwahl mit der Person prüfen.** Manche Wendungen klingen regional anders, zum Beispiel ist „wo du hängen geblieben bist“ in der Schweiz abwertend. Neutral: „wo es bei dir nicht geklappt hat“.
+- **Überschrift „Als Nächstes: <Titel>“** (Eigenschaft `naechstes`), ohne Angabe „Weiter geht's“. **Nie „Danke fürs Schauen“ oder „Bis dann“**: Abschiedsworte lassen viele Zuschauer sofort wegklicken.
+- **Leise Musik** darunter, mit ElevenLabs erzeugt (eigene Lizenz): `node werkzeuge/musik.mjs public/klang/abspann-musik.mp3 18 "calm warm instrumental lo-fi, soft electric piano, no vocals, smooth fade out"`. Unter der Stimme leise, danach etwas lauter.
 - Shorts bekommen keinen Abspann (dort gibt es keine Abspann-Elemente, der Verweis läuft über „Ähnliches Video“).
 
 Als MP4 rendern und in den Chat schicken.

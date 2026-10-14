@@ -27,11 +27,16 @@ Typische Funde, die ein Video viel besser machen: ein Knopf, der anders heisst a
 
 Zwei oder drei Begriffe, nach denen Leute suchen (für Titel, Beschreibung, Tags). Bei Bedarf mit der Suchvorschlagsliste von YouTube oder einem Recherche-Werkzeug. Der Hauptbegriff gehört später an den Anfang des Titels.
 
+## 4. Shorts mitplanen
+
+Schon jetzt 2 bis 3 Shorts-Themen aus dem Video festlegen: je ein Stolperstein, ein Kostenpunkt oder ein Aha-Moment. Jedes Short knüpft an ein **bestehendes oder geplantes langes Video** an und verweist darauf. So treiben die Shorts Zuschauer zum langen Video (Shorts als Zubringer, das lange Video als Fundament).
+
 ## Fertig, wenn
 
 - [ ] Thema und Ziel in einem Satz in `KANAL-STATUS.md`.
 - [ ] `fakten.md` mit Quellen und Datum.
 - [ ] Stolpersteine gesammelt.
 - [ ] Suchbegriffe notiert.
+- [ ] Shorts-Themen notiert.
 
 Weiter mit [Phase 3: Drehbuch](3-drehbuch.md).

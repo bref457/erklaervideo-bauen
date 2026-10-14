@@ -13,54 +13,65 @@ Nur Zeilen mit `> ` werden gesprochen. Szenenköpfe genau so: `## <Nr> · <Titel
 
 ---
 
-## 1 · Aufhänger (ca. 0:00–0:15) · ANIM
+## 1 · Aufhänger (0:00–0:15) · ANIM
 
-**Bild:** 
+**Bild:** Ergebnis oder Problem sofort zeigen, Titel tippt sich.
 
-**Stimme:**
+**Stimme:** Versprechen aus Titel und Thumbnail, keine Begrüssung.
 > 
 
-## 2 · Was du brauchst · ANIM
+<!-- Danach läuft automatisch der Kanal-Einstieg (1,5 s). -->
+
+## 2 · Fahrplan · ANIM
+
+**Bild:** Die Kapitel als kurze Liste.
+
+**Stimme:** Ein bis zwei Sätze, was kommt.
+> 
+
+## 3 · Was du brauchst · ANIM
 
 **Bild:** Checkliste, Punkte haken sich ab.
 
 **Stimme:**
 > 
 
-## 3 · Was es kostet · ANIM
+## 4 · Was es kostet · ANIM
 
 **Bild:** 
 
 **Stimme:**
 > 
 
-## 4 · <Schritt> · BROWSER
+## 5 · <Schritt> · BROWSER
 
 **Bild:** 
 
-**Stimme:**
+**Stimme:** Endet mit einer Brücke zum nächsten Schritt.
 > 
 
-## 5 · Stolperstein: <Problem> · ANIM
+## 6 · Stolperstein: <Problem> · ANIM
 
 **Bild:** Befehl, Fehlermeldung, Warnschild, Lösung.
 
+**Stimme:** Nach der Lösung einmal: „Wenn dir das gerade geholfen hat, lass ein Like da.“
+> 
+
+## 7 · Zusammenfassung · ANIM
+
+**Bild:** Die Schritte als Route.
+
 **Stimme:**
 > 
 
-## 6 · Zusammenfassung · ANIM
+## 8 · Abschluss mit Brücke · ANIM
 
-**Bild:** Die Schritte als Route, das Maskottchen springt von Halt zu Halt.
+**Bild:** Kurzes Fazit, Hinweis auf das nächste Video.
 
-**Stimme:**
+**Stimme:** Fazit und Brücke zum nächsten Video. Keine Abschiedsworte.
 > 
 
-## 7 · Abschluss · ANIM
-
-**Bild:** Wortmarke, Website, Kanal.
-
-**Stimme:**
-> 
+<!-- Danach läuft automatisch der Kanal-Abspann (18 s) mit „Als Nächstes: <Titel>“. -->
 
 ---
 

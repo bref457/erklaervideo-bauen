@@ -72,6 +72,7 @@ Aufruf in Claude Code: `/yt-video-bauen`. Argumente: `start` beginnt neu (besteh
 - [werkzeuge/stimme.mjs](werkzeuge/stimme.mjs): vertont `drehbuch.md` szenenweise mit Zeitstempeln, überspringt Unverändertes.
 - [werkzeuge/stimmproben.mjs](werkzeuge/stimmproben.mjs): sucht Stimmen in der ElevenLabs-Bibliothek und lässt mehrere denselben Satz sprechen.
 - [werkzeuge/toene.mjs](werkzeuge/toene.mjs): erzeugt kurze Soundeffekte mit eigener Lizenz.
+- [werkzeuge/musik.mjs](werkzeuge/musik.mjs): erzeugt kurze Hintergrundmusik mit eigener Lizenz (für den Abspann).
 - [werkzeuge/seiten.py](werkzeuge/seiten.py): fotografiert öffentliche Seiten (Cookies ablehnen, ganze Seite, Klickziele und Scroll-Marken als JSON).
 - [werkzeuge/kapitel.mjs](werkzeuge/kapitel.mjs): berechnet die YouTube-Kapitel aus den Szenenlängen.
 - [vorlagen/remotion/](vorlagen/remotion/): erprobte Bausteine (Szene mit Stimme und Wort-Synchronisation, Browser mit Mauszeiger, Terminal, Windows-Oberfläche, Warnschild, Zeichen, Kanal-Einstieg, Kanal-Abspann, Untertitel, Plakette), `marke.ts` mit neutralem Standard und `marke/zeichen.svg` als Platzhalter-Logo.

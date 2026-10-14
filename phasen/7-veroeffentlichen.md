@@ -4,12 +4,14 @@ Ziel: Das Video ist mit Thumbnail, Titel, Beschreibung, Kapiteln und Tags öffen
 
 ## 1. Thumbnail
 
+**Thumbnail und Titel als Einheit:** Das Thumbnail weckt Neugier oder zeigt das Problem, der Titel liefert die Lösung. **Nie den Titel 1:1 im Thumbnail wiederholen.** Höchstens 2 bis 4 grosse, fette Wörter (z. B. Titel „Claude Code unter Windows installieren“, Thumbnail „OHNE ABO? NEIN.“ oder „FEHLER INKLUSIVE“).
+
 Drei Varianten im Kanal-Stil als `<Still>` (1280 × 720), Muster: [../vorlagen/beispiel-video/Vorschaubild.tsx](../vorlagen/beispiel-video/Vorschaubild.tsx):
 - **A sachlich:** das Thema in 2 bis 3 grossen Wörtern, Maskottchen, Symbol.
 - **B Problem:** die Fehlermeldung oder der Stolperstein als Frage.
 - **C Kosten oder Ergebnis:** Preis oder fertiges Ergebnis gross.
 
-Alle drei rendern und in den Chat schicken, mit Empfehlung. Für eine Grundanleitung meist A, weil Leute nach dem Thema suchen.
+Alle drei rendern und in den Chat schicken, mit Empfehlung. Später lassen sich Varianten in YouTube Studio gegeneinander testen („Testen und vergleichen“ beim Thumbnail). Für eine Grundanleitung meist A, weil Leute nach dem Thema suchen.
 
 ## 2. Finale Fassung rendern
 
@@ -23,7 +25,7 @@ Thumbnail nach `out/<nr>-thumbnail.png` kopieren. Den Ordner `out` für die Pers
 
 `videos/<nr>/youtube.md` aus [../vorlagen/youtube.md](../vorlagen/youtube.md):
 - **Titel:** Hauptbegriff vorn, unter 70 Zeichen, mit Jahr bei Anleitungen.
-- **Beschreibung:** zwei Sätze worum es geht, wichtige Befehle zum Kopieren, offizielle Links, Website, Kapitel, Hinweise („Die Stimme in diesem Video ist KI-generiert. Die Abläufe am Bildschirm sind nachgestellt, Stand <Monat Jahr>.“).
+- **Beschreibung:** Die **ersten zwei Zeilen** sieht man ohne „Mehr anzeigen“: dort den Nutzen in einem Satz und den wichtigsten Link (offizielle Seite oder Anleitung). Danach wichtige Befehle zum Kopieren, offizielle Links, Website, Kapitel, Hinweise („Die Stimme in diesem Video ist KI-generiert. Die Abläufe am Bildschirm sind nachgestellt, Stand <Monat Jahr>.“).
 - **Kapitel:** mit [../werkzeuge/kapitel.mjs](../werkzeuge/kapitel.mjs) aus den Szenenlängen berechnen. Erstes Kapitel muss `0:00` sein.
 - **Tags:** 6 bis 10 Begriffe, durch Komma getrennt.
 
@@ -37,9 +39,9 @@ Upload über die YouTube-Schnittstelle ist möglich, aber Videos aus nicht gepr�
 4. „Nein, nicht speziell für Kinder“.
 5. **Tags:** ganz unten auf „Mehr anzeigen“ klicken, dort ist das Feld.
 6. Veränderte oder synthetische Inhalte: Bei einer KI-Erzählstimme ohne echte Person ist das nicht eindeutig. Im Zweifel „Ja“.
-7. **Abspann** (Seite „Videoelemente“ beim Hochladen, oder später Studio → Inhalte → Video → Abspann): „Element hinzufügen“ → **Video** („Für Zuschauer am besten geeignet“, oder gezielt das nächste passende lange Video) und **Abonnieren**. Beide Elemente auf die gestrichelten Flächen im Abspann ziehen (Video links, Abo rechts) und auf die ganzen 18 Sekunden ausdehnen.
+7. **Abspann** (Seite „Videoelemente“ beim Hochladen, oder später Studio → Inhalte → Video → Abspann): „Element hinzufügen“ → **Video**: gezielt das Video, das im Abschluss angekündigt wurde. Gibt es das noch nicht, „Für Zuschauer am besten geeignet“ und später nachtragen. Höchstens 2 bis 3 Elemente. und **Abonnieren**. Beide Elemente auf die gestrichelten Flächen im Abspann ziehen (Video links, Abo rechts) und auf die ganzen 18 Sekunden ausdehnen.
 8. Sichtbarkeit zuerst „Nicht gelistet“, einmal ansehen, dann „Öffentlich“.
-9. **Angepinnter Kommentar** nach dem Veröffentlichen, mit einer Frage, z. B. „Wo hat es bei dir nicht geklappt? Schreib es hier rein.“ Kommentar schreiben, dann über die drei Punkte „Anpinnen“.
+9. **Angepinnter Kommentar** nach dem Veröffentlichen: Ergänzungen oder korrigierte Befehle und eine konkrete Frage, z. B. „Wo hat es bei dir nicht geklappt? Schreib es hier rein.“ Kommentar schreiben, dann über die drei Punkte „Anpinnen“.
 
 Häufig: Die Datei wird aus Versehen zweimal hochgeladen. Dann steht ein Video als „Entwurf“ ohne Titel in der Liste. Löschen über die drei Punkte → „Endgültig löschen“.
 

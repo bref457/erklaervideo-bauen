@@ -11,7 +11,10 @@ Dateien: `out/<nr>-<thema>.mp4` (<Länge>) · Thumbnail `out/<nr>-thumbnail.png`
 ## Beschreibung
 
 ```
-<Zwei Sätze: worum es geht und was man danach kann. Mit den Stolpersteinen, die in vielen Videos fehlen.>
+<Zeile 1: der Nutzen in einem Satz.>
+<Zeile 2: der wichtigste Link (offizielle Seite oder Anleitung).>
+
+<Danach: was das Video zeigt, mit den Stolpersteinen, die in vielen Videos fehlen.>
 
 <Wichtiger Befehl zum Kopieren, mit Hinweis „nur von der offiziellen Seite kopieren“>
 
