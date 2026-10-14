@@ -29,6 +29,9 @@ Zwei oder drei Begriffe, nach denen Leute suchen (für Titel, Beschreibung, Tags
 
 ## 4. Shorts mitplanen
 
+Bei „nur Instagram“ entfällt dieser Punkt: Dort ist jedes Reel sein eigenes Thema.
+
+
 Schon jetzt 2 bis 3 Shorts-Themen aus dem Video festlegen: je ein Stolperstein, ein Kostenpunkt oder ein Aha-Moment. Jedes Short knüpft an ein **bestehendes oder geplantes langes Video** an und verweist darauf. So treiben die Shorts Zuschauer zum langen Video (Shorts als Zubringer, das lange Video als Fundament).
 
 ## Fertig, wenn
@@ -39,4 +42,4 @@ Schon jetzt 2 bis 3 Shorts-Themen aus dem Video festlegen: je ein Stolperstein, 
 - [ ] Suchbegriffe notiert.
 - [ ] Shorts-Themen notiert.
 
-Weiter mit [Phase 3: Drehbuch](3-drehbuch.md).
+Weiter mit [Phase 3: Drehbuch](3-drehbuch.md). Bei „nur Instagram“ weiter mit dem Weg „Nur Instagram“ in [instagram.md](instagram.md), Schritt 2.

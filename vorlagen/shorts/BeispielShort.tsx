@@ -1,22 +1,29 @@
 // Beispiel-Short: Pfad nicht gefunden? Hochformat 1080 × 1920, kein Kanal-Einstieg,
 // erstes Bild = Titelbild, grosse Untertitel. Ins Projekt nach src/videos/shorts/ kopieren.
 // Voraussetzung: node werkzeuge/stimme.mjs videos/s00-pfad-nicht-gefunden
+// Für die Instagram-Fassung (Reel) zusätzlich: node werkzeuge/stimme.mjs videos/reels-verweis
+// In Root.tsx zweimal registrieren: Ordner „Shorts“ ohne format, Ordner „Reels“ mit
+// durationInFrames={laengeBeispielShort(FPS, "instagram")} und defaultProps={{ format: "instagram" as const }}.
 import type React from "react";
 import { Series, useCurrentFrame, useVideoConfig } from "remotion";
 import { szenenLaenge, wortFrame, type Stimme } from "../../bausteine/Szene";
 import { Terminal } from "../../bausteine/Terminal";
 import { farbe } from "../../marke";
-import { Kopf, Mitte, rein, ShortSzene, Verweis } from "./teile";
+import { FormatRahmen, Kopf, Mitte, rein, schlussStimme, ShortSzene, Verweis, type Format, type FormatProps, type ReelSchluss } from "./teile";
 
 import p1 from "../../../public/stimme/s00-pfad-nicht-gefunden/s01.json";
 import p2 from "../../../public/stimme/s00-pfad-nicht-gefunden/s02.json";
 import p3 from "../../../public/stimme/s00-pfad-nicht-gefunden/s03.json";
 import p4 from "../../../public/stimme/s00-pfad-nicht-gefunden/s04.json";
+import r1 from "../../../public/stimme/reels-verweis/s01.json";
 
 const VIDEO = "s00-pfad-nicht-gefunden";
 const STIMMEN = [p1, p2, p3, p4] as Stimme[];
 const KUERZEN = 0.3; // weniger Pause nach den ersten zwei Szenen, Shorts brauchen Tempo
-export const laengeBeispielShort = (fps: number) => STIMMEN.reduce((s, st) => s + szenenLaenge(st, fps), 0) - 2 * Math.round(KUERZEN * fps);
+// Instagram hat kein „verlinktes Video“: eigener Schlusssatz (siehe vorlagen/instagram/reels-verweis-drehbuch.md)
+const REEL: ReelSchluss = { stimme: r1 as Stimme, video: "reels-verweis" };
+const stimmenFuer = (format?: Format) => [...STIMMEN.slice(0, 3), schlussStimme(format, STIMMEN[3], REEL)];
+export const laengeBeispielShort = (fps: number, format?: Format) => stimmenFuer(format).reduce((s, st) => s + szenenLaenge(st, fps), 0) - 2 * Math.round(KUERZEN * fps);
 
 const HEIM = "PS C:\\Users\\demo> ";
 const FEHLER = "Set-Location : Der Pfad \"C:\\Users\\demo\\projekte\" kann nicht gefunden werden, da er nicht vorhanden ist.";
@@ -72,18 +79,20 @@ const S3: React.FC = () => {
   );
 };
 
-const S4: React.FC = () => <Verweis stimme={p4 as Stimme} video={VIDEO} zeile1="Mehr im Video" zeile2="unten verlinkt" federnBeiWort="verlinkten Video" />;
+const S4: React.FC = () => <Verweis stimme={p4 as Stimme} video={VIDEO} reel={REEL} zeile1="Mehr im Video" federnBeiWort="verlinkten Video" />;
 
-export const BeispielShort = () => {
+export const BeispielShort: React.FC<FormatProps> = ({ format }) => {
   const { fps } = useVideoConfig();
-  const [l1, l2, l3, l4] = STIMMEN;
+  const [l1, l2, l3, l4] = stimmenFuer(format);
   const k = Math.round(KUERZEN * fps);
   return (
+    <FormatRahmen format={format}>
     <Series>
       <Series.Sequence name="1 Aufhänger" durationInFrames={szenenLaenge(l1, fps) - k} premountFor={fps}><S1 /></Series.Sequence>
       <Series.Sequence name="2 Einordnung" durationInFrames={szenenLaenge(l2, fps) - k} premountFor={fps}><S2 /></Series.Sequence>
       <Series.Sequence name="3 Lösung" durationInFrames={szenenLaenge(l3, fps)} premountFor={fps}><S3 /></Series.Sequence>
       <Series.Sequence name="4 Verweis" durationInFrames={szenenLaenge(l4, fps)} premountFor={fps}><S4 /></Series.Sequence>
     </Series>
+    </FormatRahmen>
   );
 };

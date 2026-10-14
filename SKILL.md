@@ -1,13 +1,13 @@
 ---
-name: yt-video-bauen
-description: "Führt Schritt für Schritt durch YouTube-Erklärvideos ohne Kamera und ohne eigene Stimme: Kanal einrichten (Marke, KI-Stimme bei ElevenLabs, Kanal-Einstieg, Thumbnail-Stil), dann pro Video Thema und Fakten, Drehbuch, Vertonung, Bildmaterial, Animation mit Remotion, Veröffentlichen mit Titel, Beschreibung, Kapiteln, Tags und Thumbnail, Nachmessen. Bildschirmabläufe werden nachgestellt statt gefilmt. Nutzen, wenn jemand ein YouTube-Video, Erklärvideo oder Tutorial mit KI-Stimme und Animationen bauen will, /yt-video-bauen aufruft oder an einem laufenden Video weitermachen will (Datei KANAL-STATUS.md im Projekt)."
-argument-hint: "[start | weiter | neues-video | shorts | phase <0-8> | status]"
+name: erklaervideo-bauen
+description: "Führt Schritt für Schritt durch Erklärvideos für YouTube und Instagram ohne Kamera und ohne eigene Stimme: Kanal einrichten (Plattformen, Marke, KI-Stimme bei ElevenLabs, Kanal-Einstieg, Thumbnail-Stil), dann pro Video Thema und Fakten, Drehbuch, Vertonung, Bildmaterial, Animation mit Remotion, Veröffentlichen mit Titel, Beschreibung, Kapiteln, Tags und Thumbnail, Nachmessen, dazu Shorts und Instagram-Reels, auch nur Reels ohne YouTube. Bildschirmabläufe werden nachgestellt statt gefilmt. Nutzen, wenn jemand ein YouTube-Video, Reel, Erklärvideo oder Tutorial mit KI-Stimme und Animationen bauen will, /erklaervideo-bauen aufruft oder an einem laufenden Video weitermachen will (Datei KANAL-STATUS.md im Projekt)."
+argument-hint: "[start | weiter | neues-video | shorts | instagram | phase <0-8> | status]"
 user-invocable: true
 ---
 
-# YouTube-Video bauen: Kanal einmal einrichten, dann jedes Video in sieben Phasen
+# Erklärvideo bauen: Kanal einmal einrichten, dann jedes Video in sieben Phasen
 
-Dieser Skill führt eine Person durch die Erstellung von Erklärvideos für YouTube. Gesprochen wird von einer KI-Stimme (ElevenLabs), das Bild entsteht als Animation in Remotion. Bildschirmabläufe werden **nachgestellt**: echte Fotos öffentlicher Webseiten plus nachgebaute Oberflächen. Niemand muss vor die Kamera, niemand muss sprechen, niemand muss eine Stunde lang den Bildschirm aufnehmen.
+Dieser Skill führt eine Person durch die Erstellung von Erklärvideos für YouTube und Instagram (oder nur eines von beiden). Gesprochen wird von einer KI-Stimme (ElevenLabs), das Bild entsteht als Animation in Remotion. Bildschirmabläufe werden **nachgestellt**: echte Fotos öffentlicher Webseiten plus nachgebaute Oberflächen. Niemand muss vor die Kamera, niemand muss sprechen, niemand muss eine Stunde lang den Bildschirm aufnehmen.
 
 Du bist Regisseur, Cutter und Animator. Die Person entscheidet, du bereitest jede Entscheidung so vor, dass sie leicht fällt, und machst den Rest.
 
@@ -25,6 +25,7 @@ Du bist Regisseur, Cutter und Animator. Die Person entscheidet, du bereitest jed
 | 7 | Veröffentlichen | pro Video | Thumbnail, YouTube-Texte, Upload, Einbau auf der Website | [phasen/7-veroeffentlichen.md](phasen/7-veroeffentlichen.md) |
 | 8 | Danach | pro Video | Zahlen, Kommentare, nächstes Thema | [phasen/8-danach.md](phasen/8-danach.md) |
 | + | Shorts | pro Video, nach Phase 7 | 2 bis 3 Shorts im Hochformat mit Untertiteln, verweisen aufs ganze Video | [phasen/shorts.md](phasen/shorts.md) |
+| + | Instagram | pro Short oder pro Reel | Reel-Fassung (andere sichere Zone, Schluss „auf YouTube“), Beschriftung, Hochladen mit „Original“-Zuschnitt und KI-Label | [phasen/instagram.md](phasen/instagram.md) |
 
 Die Reihenfolge hat Gründe. Die Fakten kommen vor dem Drehbuch, weil sich Abläufe und Preise ständig ändern und ein Video mit veraltetem Ablauf schadet. Das Drehbuch wird abgenommen, bevor eine Sekunde Ton entsteht, weil jede Textänderung danach neu vertont werden muss. Die Stimme kommt vor der Animation, weil die Animation an den gesprochenen Wörtern hängt: Ein Schild erscheint genau dann, wenn die Stimme das Wort sagt. Das Thumbnail kommt am Schluss, weil erst dann klar ist, was das Video wirklich zeigt.
 
@@ -35,7 +36,7 @@ Die Reihenfolge hat Gründe. Die Fakten kommen vor dem Drehbuch, weil sich Ablä
 3. **Phase durcharbeiten.** Fragen nur dort, wo die Phasendatei eine Entscheidung der Person verlangt. Alles andere selbst erledigen.
 4. **Abschluss.** Kurz zeigen, was entstanden ist (Hördatei, Standbilder, MP4), Statusdatei aktualisieren, die nächste Phase in einem Satz ankündigen.
 
-Aufruf in Claude Code: `/yt-video-bauen`. Argumente: `start` beginnt neu (bestehende Statusdatei vorher zeigen und nachfragen), `weiter` setzt fort, `neues-video` startet das nächste Video bei Phase 2, `phase 4` springt gezielt in eine Phase (vorher prüfen, ob deren Eingaben vorliegen), `status` zeigt nur den Stand.
+Aufruf in Claude Code: `/erklaervideo-bauen`. Argumente: `start` beginnt neu (bestehende Statusdatei vorher zeigen und nachfragen), `weiter` setzt fort, `neues-video` startet das nächste Video bei Phase 2, `phase 4` springt gezielt in eine Phase (vorher prüfen, ob deren Eingaben vorliegen), `shorts` und `instagram` springen in die jeweilige Zusatzphase, `status` zeigt nur den Stand. Steht in `KANAL-STATUS.md` „nur Instagram“, führt `neues-video` nach Phase 2 in den Weg „Nur Instagram“ ([phasen/instagram.md](phasen/instagram.md)) statt in Phase 3.
 
 ## So führst du
 

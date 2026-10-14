@@ -1,6 +1,6 @@
 # Kanal-Status
 
-Diese Datei hält fest, wo Kanal und Videos stehen. Der Skill `yt-video-bauen` liest sie bei jedem Aufruf und macht dort weiter.
+Diese Datei hält fest, wo Kanal und Videos stehen. Der Skill `erklaervideo-bauen` liest sie bei jedem Aufruf und macht dort weiter.
 
 Status: ✅ erledigt · 🔄 läuft · ⬜ offen
 
@@ -11,7 +11,9 @@ Status: ✅ erledigt · 🔄 läuft · ⬜ offen
 | 0 | Einrichten | ⬜ | |
 | 1 | Kanal-Fundament | ⬜ | |
 
+- Plattformen: YouTube / Instagram / beides
 - YouTube-Kanal:
+- Instagram-Konto:
 - Website:
 - Projektordner:
 - Werkzeuge: Remotion ⬜ · Remotion-Skills ⬜ · ElevenLabs ⬜ · Playwright ⬜ · ffmpeg ⬜

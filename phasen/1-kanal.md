@@ -1,8 +1,23 @@
 # Phase 1: Kanal-Fundament (einmal pro Kanal)
 
-Ziel: Alles, was in jedem Video gleich ist, steht fest: Erkennbarkeit, Marke, Stimme, Kanal-Einstieg, Thumbnail-Stil und das Kanal-Profil. Danach geht jedes neue Video direkt bei Phase 2 los.
+Ziel: Alles, was in jedem Video gleich ist, steht fest: Plattformen, Erkennbarkeit, Marke, Stimme, Kanal-Einstieg, Thumbnail-Stil und das Kanal-Profil. Danach geht jedes neue Video direkt bei Phase 2 los.
 
-## 1. Erkennbarkeit (zuerst klären)
+## 0. Plattformen (als Erstes fragen)
+
+Fragen: Wo sollen die Videos laufen?
+- **YouTube:** lange Erklärvideos, dazu Shorts.
+- **Instagram:** nur kurze Reels im Hochformat.
+- **Beides:** lange Videos auf YouTube, die Shorts zusätzlich als Reels auf Instagram.
+
+Antwort in `KANAL-STATUS.md` unter „Plattformen“ eintragen. Sie bestimmt den Weg:
+
+| Plattform | Pro Video | In dieser Phase entfällt |
+|---|---|---|
+| YouTube | Phasen 2 bis 8, danach Shorts | nichts |
+| Beides | wie YouTube, danach die Shorts als Reels ([instagram.md](instagram.md)) | nichts |
+| Nur Instagram | Phase 2, dann direkt Reels nach dem Weg „Nur Instagram“ in [instagram.md](instagram.md). Kein langes Video, Phasen 3 bis 8 entfallen. | Kanal-Einstieg (4), Kanal-Abspann (5), Thumbnail-Stil (6). Das Kanal-Profil (7) ist das Instagram-Profil. |
+
+## 1. Erkennbarkeit
 
 Fragen: Darf die Person erkennbar sein? Gesicht, eigene Stimme, Name, Wohnort? Manche dürfen oder wollen das nicht, etwa aus beruflichen oder privaten Gründen. Den Grund muss die Person nicht nennen. Das ist eine harte Grenze und wird in `KANAL-STATUS.md` als Regel eingetragen.
 
@@ -60,7 +75,9 @@ Festlegen, was jedes Thumbnail gemeinsam hat: Hintergrund, Schrift, Maskottchen,
 
 ## 7. Kanal-Profil
 
-Falls noch nicht geschehen, mit der Person in YouTube Studio → Anpassung:
+Für Instagram: Konto und Profil nach [instagram.md](instagram.md), Abschnitt „Einmal: Konto einrichten“.
+
+Für YouTube, falls noch nicht geschehen, mit der Person in YouTube Studio → Anpassung:
 - Profilbild und Banner (2560 × 1440, wichtiger Inhalt in der Mitte),
 - Handle (wenn der Wunschname vergeben ist, eine Variante mit Länderkürzel oder Thema prüfen),
 - Beschreibung und Links (Website, GitHub). Text aus vorhandenen Profiltexten der Website übernehmen, damit überall dieselben Fakten stehen.
@@ -71,12 +88,13 @@ Die Person bestätigt Stimme, Einstieg, Abspann und Thumbnail-Stil.
 
 ## Fertig, wenn
 
+- [ ] Plattformen entschieden und in `KANAL-STATUS.md`.
 - [ ] Erkennbarkeit entschieden und als Regel in `KANAL-STATUS.md`.
 - [ ] `marke.ts` und Markenbausteine angepasst.
 - [ ] Stimme gewählt, `voice_id` in `.env`.
-- [ ] Kanal-Einstieg als MP4 abgenommen.
-- [ ] Kanal-Abspann als MP4 abgenommen, Sprechtext mit der Person abgestimmt.
-- [ ] Thumbnail-Stil beschrieben.
+- [ ] Kanal-Einstieg als MP4 abgenommen (nur mit YouTube).
+- [ ] Kanal-Abspann als MP4 abgenommen, Sprechtext mit der Person abgestimmt (nur mit YouTube).
+- [ ] Thumbnail-Stil beschrieben (nur mit YouTube).
 - [ ] Kanal-Profil vollständig.
 
 Weiter mit [Phase 2: Thema und Fakten](2-thema.md).

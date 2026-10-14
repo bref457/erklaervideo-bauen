@@ -42,7 +42,7 @@ const gruppen = (liste: Wort[]) => {
   return ergebnis;
 };
 
-export const Untertitel: React.FC<{ readonly stimme: Stimme; readonly oben: number }> = ({ stimme, oben }) => {
+export const Untertitel: React.FC<{ readonly stimme: Stimme; readonly oben: number; readonly groesse?: number }> = ({ stimme, oben, groesse = 82 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = frame / fps - VORLAUF;
@@ -63,7 +63,7 @@ export const Untertitel: React.FC<{ readonly stimme: Stimme; readonly oben: numb
         gap: "0 22px",
         fontFamily: schrift.kopf,
         fontWeight: 800,
-        fontSize: 82,
+        fontSize: groesse,
         lineHeight: 1.15,
         letterSpacing: "-0.03em",
         textAlign: "center",
