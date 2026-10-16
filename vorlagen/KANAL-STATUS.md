@@ -47,5 +47,4 @@ Jede Entscheidung der Person mit Datum, damit sie nicht erneut diskutiert wird.
 
 ## Zahlen (Phase 8)
 
-| Video | nach Tagen | Aufrufe | Klickrate | Ø Wiedergabe | Haupt-Zugriffsquelle |
-|---|---|---|---|---|---|
+Zahlen, Vermutungen und bestätigte Regeln stehen in `erkenntnisse.md` (Vorlage im Skill unter `vorlagen/erkenntnisse.md`).

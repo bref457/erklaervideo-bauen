@@ -23,7 +23,7 @@ Du bist Regisseur, Cutter und Animator. Die Person entscheidet, du bereitest jed
 | 5 | Bildmaterial | pro Video | Seitenfotos, Liste der Nachbauten | [phasen/5-bildmaterial.md](phasen/5-bildmaterial.md) |
 | 6 | Animation und Schnitt | pro Video | fertiger Entwurf als MP4 | [phasen/6-animation.md](phasen/6-animation.md) |
 | 7 | Veröffentlichen | pro Video | Thumbnail, YouTube-Texte, Upload, Einbau auf der Website | [phasen/7-veroeffentlichen.md](phasen/7-veroeffentlichen.md) |
-| 8 | Danach | pro Video | Zahlen, Kommentare, nächstes Thema | [phasen/8-danach.md](phasen/8-danach.md) |
+| 8 | Danach | pro Video | Zahlen und Erkenntnisse in `erkenntnisse.md`, Kommentare, nächstes Thema | [phasen/8-danach.md](phasen/8-danach.md) |
 | + | Shorts | pro Video, nach Phase 7 | 2 bis 3 Shorts im Hochformat mit Untertiteln, verweisen aufs ganze Video | [phasen/shorts.md](phasen/shorts.md) |
 | + | Instagram | pro Short oder pro Reel | Reel-Fassung (andere sichere Zone, Schluss „auf YouTube“), Beschriftung, Hochladen mit „Original“-Zuschnitt und KI-Label | [phasen/instagram.md](phasen/instagram.md) |
 
@@ -32,9 +32,10 @@ Die Reihenfolge hat Gründe. Die Fakten kommen vor dem Drehbuch, weil sich Ablä
 ## Ablauf bei jedem Aufruf
 
 1. **Statusdatei lesen.** Gibt es im Projektordner `KANAL-STATUS.md`? Dann dort weitermachen und in einem Satz sagen, welches Video und welche Phase dran ist. Gibt es sie nicht, mit Phase 0 beginnen und sie aus [vorlagen/KANAL-STATUS.md](vorlagen/KANAL-STATUS.md) anlegen.
-2. **Nur die aktuelle Phasendatei laden.** Nicht alle auf einmal.
-3. **Phase durcharbeiten.** Fragen nur dort, wo die Phasendatei eine Entscheidung der Person verlangt. Alles andere selbst erledigen.
-4. **Abschluss.** Kurz zeigen, was entstanden ist (Hördatei, Standbilder, MP4), Statusdatei aktualisieren, die nächste Phase in einem Satz ankündigen.
+2. **Erkenntnisse lesen.** Gibt es `erkenntnisse.md` im Projekt, in Phase 2, 3, 7 und bei Shorts die Vermutungen und bestätigten Regeln beachten und offene Tests ins aktuelle Video einbauen.
+3. **Nur die aktuelle Phasendatei laden.** Nicht alle auf einmal.
+4. **Phase durcharbeiten.** Fragen nur dort, wo die Phasendatei eine Entscheidung der Person verlangt. Alles andere selbst erledigen.
+5. **Abschluss.** Kurz zeigen, was entstanden ist (Hördatei, Standbilder, MP4), Statusdatei aktualisieren, die nächste Phase in einem Satz ankündigen.
 
 Aufruf in Claude Code: `/erklaervideo-bauen`. Argumente: `start` beginnt neu (bestehende Statusdatei vorher zeigen und nachfragen), `weiter` setzt fort, `neues-video` startet das nächste Video bei Phase 2, `phase 4` springt gezielt in eine Phase (vorher prüfen, ob deren Eingaben vorliegen), `shorts` und `instagram` springen in die jeweilige Zusatzphase, `status` zeigt nur den Stand. Steht in `KANAL-STATUS.md` „nur Instagram“, führt `neues-video` nach Phase 2 in den Weg „Nur Instagram“ ([phasen/instagram.md](phasen/instagram.md)) statt in Phase 3.
 
@@ -57,6 +58,7 @@ Aufruf in Claude Code: `/erklaervideo-bauen`. Argumente: `start` beginnt neu (be
 7. **Live-Schritte nur mit ausdrücklichem OK.** Hochladen auf die Website, Veröffentlichen, Löschen: erst nach Bestätigung. Bei YouTube lädt die Person selbst hoch (siehe Phase 7).
 8. **Begrenzt prüfen.** Szenen bauen, einmal gebündelt als Standbild-Raster prüfen, alles auf einmal beheben, höchstens ein zweiter Durchgang.
 9. **Sprechtexte nach [sprechregeln.md](sprechregeln.md).** Gesprochenes ist kein Lesetext.
+10. **Aufbau nach [aufbauregeln.md](aufbauregeln.md).** Erste 5 und 20 Sekunden, Bildwechsel alle 3 bis 5 Sekunden, Tempo in Wellen, Ende auf einem Hoch. Prüfliste in Phase 3 und 6 abhaken.
 
 ## Werkzeuge
 
@@ -78,6 +80,6 @@ Aufruf in Claude Code: `/erklaervideo-bauen`. Argumente: `start` beginnt neu (be
 - [werkzeuge/kapitel.mjs](werkzeuge/kapitel.mjs): berechnet die YouTube-Kapitel aus den Szenenlängen.
 - [vorlagen/remotion/](vorlagen/remotion/): erprobte Bausteine (Szene mit Stimme und Wort-Synchronisation, Browser mit Mauszeiger, Terminal, Windows-Oberfläche, Warnschild, Zeichen, Kanal-Einstieg, Kanal-Abspann, Untertitel, Plakette), `marke.ts` mit neutralem Standard und `marke/zeichen.svg` als Platzhalter-Logo.
 - [vorlagen/beispiel-video/](vorlagen/beispiel-video/): kurzes, vollständiges Muster-Video („Die ersten drei Befehle in der PowerShell“): Drehbuch, Szenen, Root, Thumbnails.
-- [vorlagen/KANAL-STATUS.md](vorlagen/KANAL-STATUS.md), [vorlagen/drehbuch.md](vorlagen/drehbuch.md), [vorlagen/youtube.md](vorlagen/youtube.md).
+- [vorlagen/KANAL-STATUS.md](vorlagen/KANAL-STATUS.md), [vorlagen/erkenntnisse.md](vorlagen/erkenntnisse.md), [vorlagen/drehbuch.md](vorlagen/drehbuch.md), [vorlagen/youtube.md](vorlagen/youtube.md).
 
 Werkzeuge mit vollem Pfad zum Skill-Ordner aufrufen oder einmalig ins Projekt nach `werkzeuge/` kopieren. Bausteine ins Projekt nach `src/bausteine/` kopieren und an die Marke anpassen.

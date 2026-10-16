@@ -5,7 +5,8 @@ Ein Skill für KI-Agenten wie Claude Code, der dich Schritt für Schritt durch E
 - **Stimme:** eine KI-Stimme von ElevenLabs, die du aus mehreren Proben auswählst
 - **Bild:** Animationen mit Remotion, jede Einblendung genau auf das gesprochene Wort
 - **Bildschirmabläufe:** nachgestellt, mit echten Fotos öffentlicher Webseiten und nachgebauten Oberflächen. Niemand muss eine Stunde lang aufnehmen, nichts Persönliches ist zu sehen.
-- **Veröffentlichen:** Titel, Beschreibung, Kapitel mit Zeitangaben, Tags, drei Thumbnail-Vorschläge und eine Anleitung zum Hochladen
+- **Veröffentlichen:** je drei Vorschläge für Thumbnail und Titel, Beschreibung, Kapitel mit Zeitangaben, Tags und eine Anleitung zum Hochladen
+- **Dazulernen:** Nach jedem Video werden die Zahlen aus YouTube Studio in `erkenntnisse.md` festgehalten. Was sich bestätigt, fliesst ins nächste Video ein.
 - **Shorts:** aus jedem Video 2 bis 3 Shorts im Hochformat mit grossen, mitlaufenden Untertiteln
 - **Instagram:** die Shorts als Reels, angepasst an Instagrams Bildbereiche, mit Beschriftung und Anleitung zum Hochladen. Oder nur Reels, ganz ohne YouTube.
 
@@ -53,7 +54,7 @@ Der Skill speichert den Stand in `KANAL-STATUS.md`. Weitermachen in einem neuen 
 | 5 | Bildmaterial | pro Video |
 | 6 | Animation und Schnitt | pro Video |
 | 7 | Veröffentlichen | pro Video |
-| 8 | Danach | pro Video |
+| 8 | Danach (Zahlen auswerten, dazulernen) | pro Video |
 | + | Shorts | pro Video |
 | + | Instagram-Reels | pro Short oder pro Reel |
 

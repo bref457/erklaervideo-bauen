@@ -2,16 +2,25 @@
 
 Ziel: Das Video ist mit Thumbnail, Titel, Beschreibung, Kapiteln und Tags öffentlich auf YouTube und, falls es eine Website gibt, dort eingebunden.
 
-## 1. Thumbnail
+## 1. Thumbnail und Titel
 
-**Thumbnail und Titel als Einheit:** Das Thumbnail weckt Neugier oder zeigt das Problem, der Titel liefert die Lösung. **Nie den Titel 1:1 im Thumbnail wiederholen.** Höchstens 2 bis 4 grosse, fette Wörter (z. B. Titel „Claude Code unter Windows installieren“, Thumbnail „OHNE ABO? NEIN.“ oder „FEHLER INKLUSIVE“).
+**Thumbnail und Titel als Einheit:** Das Thumbnail weckt Neugier oder zeigt das Problem, der Titel liefert die Lösung. **Nie den Titel 1:1 im Thumbnail wiederholen.** Höchstens 2 bis 4 grosse, fette Wörter (z. B. Titel „X unter Windows installieren“, Thumbnail „OHNE ABO? NEIN.“ oder „FEHLER INKLUSIVE“).
 
-Drei Varianten im Kanal-Stil als `<Still>` (1280 × 720), Muster: [../vorlagen/beispiel-video/Vorschaubild.tsx](../vorlagen/beispiel-video/Vorschaubild.tsx):
-- **A sachlich:** das Thema in 2 bis 3 grossen Wörtern, Maskottchen, Symbol.
-- **B Problem:** die Fehlermeldung oder der Stolperstein als Frage.
-- **C Kosten oder Ergebnis:** Preis oder fertiges Ergebnis gross.
+**Das Bild zeigt das Thema, der Text ergänzt nur.** Wer nur das Thumbnail sieht, muss erkennen, worum es geht: das Programm, das Fenster, die Fehlermeldung, das Ergebnis. Ein Gefühl oder Versprechen allein („Endlich ehrlich“) reicht nicht. Gut ist zum Beispiel: das Programmfenster, ein ratloses Maskottchen, dazu „Was ist das?!“. Bild und Text erzählen zusammen eine kleine Geschichte. Text auch in Handygrösse (etwa 160 px breit) noch lesbar, darum höchstens 4 Wörter.
 
-Alle drei rendern und in den Chat schicken, mit Empfehlung. Später lassen sich Varianten in YouTube Studio gegeneinander testen („Testen und vergleichen“ beim Thumbnail). Für eine Grundanleitung meist A, weil Leute nach dem Thema suchen.
+Drei Varianten im Kanal-Stil als `<Still>` (1280 × 720), Muster: [../vorlagen/beispiel-video/Vorschaubild.tsx](../vorlagen/beispiel-video/Vorschaubild.tsx). Jede zeigt das Thema als Bild:
+- **A Frage:** das Thema im Bild, dazu die Frage oder Unsicherheit der Zuschauer („Was ist das?!“).
+- **B Problem:** die Fehlermeldung oder der Stolperstein im Bild, dazu ein kurzer Ausruf.
+- **C Ergebnis oder Kosten:** das fertige Ergebnis oder der Preis gross.
+
+Alle drei rendern, zusätzlich je eine Fassung in Handygrösse (etwa 320 × 180) prüfen und mit Empfehlung in den Chat schicken. Bevorzugt die Variante, die ein Problem oder eine Frage zeigt. Ein neuer Kanal bekommt seine Impressionen vor allem über Vorschläge und das Startseiten-Feed, nicht über die Suche, und dort klickt man aus Neugier.
+
+**Titel:** drei Varianten zum Thumbnail vorschlagen, alle mit dem Hauptbegriff vorn:
+- **sachlich:** „X unter Windows installieren (2026)“
+- **Problem oder Frage:** „X unter Windows: Was kostet es, was geht schief? (2026)“
+- **Nutzen:** „X unter Windows in 10 Minuten startklar (2026)“ (Zahlen und Versprechen nur, wenn sie stimmen, siehe Regel 1 „Nichts erfinden“)
+
+Wörter wie „Schritt für Schritt“, „Anleitung“ oder „Tutorial“ allein machen niemanden neugierig, darum nicht als einziges Merkmal verwenden. Die Person wählt den Titel. Nach dem Hochladen zwei Thumbnails, wo möglich auch Titel, in YouTube Studio mit „Testen und vergleichen“ gegeneinander laufen lassen.
 
 ## 2. Finale Fassung rendern
 
@@ -24,7 +33,7 @@ Thumbnail nach `out/<nr>-thumbnail.png` kopieren. Den Ordner `out` für die Pers
 ## 3. YouTube-Texte
 
 `videos/<nr>/youtube.md` aus [../vorlagen/youtube.md](../vorlagen/youtube.md):
-- **Titel:** Hauptbegriff vorn, unter 70 Zeichen, mit Jahr bei Anleitungen.
+- **Titel:** der gewählte aus Abschnitt 1, Hauptbegriff vorn, unter 70 Zeichen, mit Jahr bei Anleitungen. Die anderen beiden als Alternativen für den Test notieren.
 - **Beschreibung:** Die **ersten zwei Zeilen** sieht man ohne „Mehr anzeigen“: dort den Nutzen in einem Satz und den wichtigsten Link (offizielle Seite oder Anleitung). Danach wichtige Befehle zum Kopieren, offizielle Links, Website, Kapitel, Hinweise („Die Stimme in diesem Video ist KI-generiert. Die Abläufe am Bildschirm sind nachgestellt, Stand <Monat Jahr>.“).
 - **Kapitel:** mit [../werkzeuge/kapitel.mjs](../werkzeuge/kapitel.mjs) aus den Szenenlängen berechnen. Erstes Kapitel muss `0:00` sein.
 - **Tags:** 6 bis 10 Begriffe, durch Komma getrennt.
@@ -57,7 +66,9 @@ Wenn die Website Videos per Klick lädt (Vorschaubild lokal, YouTube erst nach K
 
 ## Fertig, wenn
 
-- [ ] Thumbnail gewählt.
+- [ ] Thumbnail gewählt: zeigt das Thema als Bild, Text in Handygrösse lesbar.
+- [ ] Titel aus drei Varianten gewählt, Alternativen in `youtube.md` notiert.
+- [ ] „Testen und vergleichen“ mit zwei Thumbnails gestartet.
 - [ ] Finale MP4 und `youtube.md` fertig.
 - [ ] Abspann-Elemente gesetzt (Video und Abonnieren).
 - [ ] Video öffentlich, Link in `KANAL-STATUS.md`.

@@ -13,6 +13,8 @@ Das Format ist fest, weil `stimme.mjs` es liest:
 
 ## Aufbau, der funktioniert
 
+Grundlage sind die [Aufbauregeln](../aufbauregeln.md): erster Satz greift den Titel auf, Szene 1 sieht aus wie das Thumbnail, in den ersten 20 Sekunden Kontext, Belohnung und eine Neugier-Lücke, danach sofort der Hauptteil.
+
 1. **Aufhänger (0 bis 15 s):** Das Versprechen aus Titel und Thumbnail sofort aufgreifen und das Ergebnis anreissen: „In diesem Video installieren wir X unter Windows, Schritt für Schritt, mit den Stellen, an denen es hakt.“ **Keine Begrüssung** („Hallo Leute, willkommen auf meinem Kanal“), die wird übersprungen. Nur versprechen, was stimmt (keine erfundenen Zeitangaben wie „in 5 Minuten“).
 2. Danach läuft automatisch der **Kanal-Einstieg** (1,5 s).
 3. **Fahrplan (ein bis zwei Sätze):** was im Video kommt, in der Reihenfolge der Kapitel. „Wir gehen durch die Voraussetzungen, die Installation und die häufigsten Fehler.“
@@ -50,6 +52,7 @@ Die Person liest das Drehbuch. Zur Übersicht in sechs Zeilen zusammenfassen, wa
 - [ ] Alle Szenen im festen Format.
 - [ ] Jeder Fakt aus `fakten.md`, nichts erfunden.
 - [ ] Sprechregeln geprüft.
+- [ ] Prüfliste der [Aufbauregeln](../aufbauregeln.md) für das Drehbuch abgehakt.
 - [ ] Die Person hat bestätigt.
 
 Weiter mit [Phase 4: Stimme](4-stimme.md).

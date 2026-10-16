@@ -81,6 +81,7 @@ Die Person sieht den Entwurf an und sagt „passt“ oder was zu ändern ist. Kl
 - [ ] Keine echten persönlichen Daten im Bild.
 - [ ] Standbild-Raster geprüft, Text auch verkleinert lesbar.
 - [ ] Lautheit gemessen (um −14 LUFS).
+- [ ] Prüfliste der [Aufbauregeln](../aufbauregeln.md) für die Animation abgehakt: Bildwechsel alle 3 bis 5 Sekunden, Entwurf am Stück angeschaut, zähe Stellen behoben.
 - [ ] Entwurf als MP4 von der Person bestätigt.
 
 Weiter mit [Phase 7: Veröffentlichen](7-veroeffentlichen.md).
